@@ -42,7 +42,8 @@ ul{
     right: -5px;
 }
 .navbar .container .nav-content .nav-link ul{
-    display: flex;
+    /* display: flex; */
+    display: none;
     flex-wrap: wrap;
     align-items: center;
     gap: 20px;
@@ -81,50 +82,52 @@ ul{
 .home-page{
     background-color: #EEEEEE;
     padding: 25px 0;
-    height: 90vh;
+    min-height: 95vh;
+    /* width: 100%; */
 }
 .home-page .container .home-content{
     display: flex;
     flex-wrap: wrap;
+    /* flex-direction: row; */
+    flex-direction: column-reverse;
     justify-content: space-between;
     align-items: center;
 }
 .home-page .container .home-content .home-info{
-    width: 45%;
-    margin-right: 30px;
-    padding: 20px 0px;
+    /* width: 45%; */
+    width: 100%;
+    /* text-align: start; */
+    text-align: center;
+
 }
 .home-page .container .home-content .home-info h2{
     color: #37373F;
     font-size: 65px;
     font-weight: 700;
     font-family: "Amatic SC", sans-serif;
-    margin-bottom: 20px;
+   
 }
 .home-page .container .home-content .home-info p{
     color: #4F4F5A;
     font-weight: 400;
-    margin-bottom: 20px;
+    padding-block: 10px;
 }
 .home-page .container .home-content .home-info .buttons{
     display: flex;
     flex-wrap: wrap;
+    /* justify-content: start; */
+    justify-content: center;
     align-items: center;
-    padding: 10px 0;
+    gap: 10px;
+    padding-bottom: 20px;
 }
 .home-page .container .home-content .home-info .buttons button{
-    width: 20%;
-    margin-right: 30px;
+    margin-right: 30px; 
     color: #fff;
     background-color: red;
     border:solid red 2px ;
     border-radius : 0px 20px 20px 20px;
-    padding: 10px;
-}
-
-.home-page .container .home-content .home-info .buttons .button-youtube{
-    width: 26%;
-    padding: 10px;
+    padding: 15px 20px;
 }
 .home-page .container .home-content .home-info .buttons .button-youtube a{
     text-decoration: none;
@@ -150,18 +153,9 @@ ul{
     right: -12px;
     z-index: -22;
 }
-/* .home-page .container .home-content .home-info .buttons .button-youtube a i::before{
-    content: "";
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: solid 5px red;
-    position: absolute;
-
-
-} */
 .home-page .container .home-content .home-image{
-    width: 40%;
+    /* width: 40%; */
+    width: 100%;
 }
 .home-page .container .home-content .home-image img{
     width: 100%;
@@ -191,8 +185,9 @@ ul{
 /***** start chefs page *****/
 .chefs-page{
     padding: 40px 0;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
 }
 
 .chefs-page .container .chefs-info{
@@ -221,8 +216,8 @@ ul{
     justify-content: space-between;
 }
 .chefs-page .container .chefs-image .items{
-    width: 31%;
-    margin-top: 20px;
+    /* width: calc((100% -60px) / 3); */
+    width: 100%;
 }
 
 .chefs-page .container .chefs-image .items .inner{
@@ -232,6 +227,7 @@ ul{
     transition: all 1s;
     border-radius: 20px;
     box-shadow: 3px 3px 15px 0px rgba(0, 0, 0, 0.3);
+    margin-bottom: 30px;
 }
 .chefs-page .container .chefs-image .items .inner:hover {
     transform:scale(1.1 , 1.1); 
@@ -251,7 +247,7 @@ ul{
     margin: 20px 10px;
     padding: 10px;
     border-radius: 10px;
-    transform: translateX(120%);
+    transform: translateX(130%);
     transition: all 1s 1s;
     
 }
@@ -277,14 +273,18 @@ ul{
 
 /***** start gallery page *****/
 .gallery-page{
-    padding: 40px 0;
-    margin-bottom: 30px;
     background-color: #EEEEEE;
+}
+.gallery-page .container .gallery-box{
+    padding: 40px 0;
+    /* columns: 3; */
+    gap: 20px;
+    columns: 1;
 }
 
 .gallery-page .container .gallery-info{
-    padding: 30px;
     text-align: center;
+    padding: 15px 0;
 }
 .gallery-page .container .gallery-info h3{
     color: #7F7F90;
@@ -307,9 +307,7 @@ ul{
     justify-content: space-between;
     gap: 10px;
 }
-.gallery-page .container .gallery-image .gallery-image-col{
-    width: 32%;
-}
+
 .gallery-page .container .gallery-image .gallery-image-col img{
     width: 100%;
 }
@@ -354,11 +352,10 @@ ul{
 
 /***** start contact Page *****/
 .contact-page{
-    padding: 40px 0;
-    margin-bottom: 30px;
+    /* padding: 40px 0; */
 }
 .contact-page .container .contact-info{
-    padding: 30px;
+    padding: 40px 0px;
     text-align: center;
 }
 .contact-page .container .contact-info h3{
@@ -377,44 +374,37 @@ ul{
     color: #CE1212;
 }
 .contact-page .container .contact-info iframe{
+    display: block;
     width: 100%;
-    margin-top: 20px;
 }
 .contact-page .container .contact-mealify-info{
-    
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px;
+    column-gap: 30px;
+    
 }
 .contact-page .container .contact-mealify-info .item{
-    width: 49%;
+    /* width: calc((100% - 30px) / 2); */
+    width: 100%;
     background-color: #F5F5F5;
-    margin: 10px 0px;
-    padding: 15px;
+    padding: 20px;
+    margin-bottom: 30px;
     display: flex;
-    flex-flow: row wrap;
+    gap: 10px;
     align-items: center;
+    border-radius: 4px;
 }
-.contact-page .container .contact-mealify-info .item i{
-    padding-right: 10px;
-    margin-right: 10px;
-    position: relative;
-    z-index: 22;
-    font-size: 20px;
-    color: #fff;
-}
-.contact-page .container .contact-mealify-info .item i::after{
-    content: "";
+.contact-page .container .contact-mealify-info .item .icon{
+    background-color:#CE1212;
     width: 45px;
     height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 50%;
-    background-color:#CE1212;
-    position: absolute;
-    top: -14px;
-    right: -3px;
-    z-index: -22;
+    color: #fff;
+    flex-shrink: 0;
+
 }
 .contact-page .container .contact-mealify-info .item .decsription h3{
     color: #7D7D7D;
@@ -459,11 +449,12 @@ ul{
 }
 .contact-page .container .contact-form .row{
     display: flex;
-    text-align: center;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    column-gap: 20px;
 }
 .contact-page .container .contact-form .row .form-input{
-    flex-basis: 49%;
+    /* width: calc((100% - 20px) /2); */
+    width: 100%;
 }
 .contact-page .container .contact-form button{
     font-size: 18px; 
@@ -486,25 +477,25 @@ ul{
 footer {
     background-image: url('./../image/textured-metal-background.jpg');
     background-position: center;
-    background-size: cover;
+    background-size: contain;
     padding: 40px 0;
     color: #fff;
 }
 footer .container .footer-box{
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 25px;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 footer .container .footer-box .about{
-    width: calc( (100% - 50px) / 4);
+    /* width: calc( (100% - 40px) / 4); */
+    width: 100%;
 }
 footer .container .footer-box .about .title{
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 10px;
-    margin: 10px 0;
+   
 }
 footer .container .footer-box .about .title img{
     width: 40px;
@@ -528,7 +519,6 @@ footer .container .footer-box .about p{
     line-height: 20px;
     font-family: "Open Sans", system-ui, -apple-system, "Segoe UI" ,Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
                  "Apple Color Emoji", "Segoe UI Emoji" , "Segoe UI Symbol" ,"Noto Color Emoji"; 
-    padding-right: 20px;
 }
 footer .container .footer-box .about h3{
     font-size: 18.72px;
@@ -537,7 +527,7 @@ footer .container .footer-box .about h3{
                  "Apple Color Emoji", "Segoe UI Emoji" , "Segoe UI Symbol" ,"Noto Color Emoji"; 
     border-bottom: 2px solid #585858;
     text-align: center;
-    padding-block: 10px;
+    padding-block: 5px;
 }
 footer .container .footer-box .about ul{
     display: flex;
@@ -549,11 +539,12 @@ footer .container .footer-box .about ul a{
     font-size: 24px;
 }
 footer .container .footer-box .middle-footer{
-
+    /* width: calc( (100% - 40px) / 2); */
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 10px;
-    width: calc( (100% - 50px) / 2);
+  
 }
 footer .container .footer-box .middle-footer .title{
    margin: 10px 0; 
@@ -574,14 +565,16 @@ footer .container .footer-box .middle-footer .search-box{
 }
 footer .container .footer-box .middle-footer .search-box input{
     flex-grow: 1;
-    padding: 8px;
+    padding: 10px;
     border: none;
 }
 footer .container .footer-box .middle-footer .search-box button{
     background-color: red;
     color: #fff;
     border: none;
-    padding: 8px;
+    border-radius: 2px;
+    padding: 10px 5px;
+    min-width: 110px;
 }
 footer .container .footer-box .middle-footer .search-box button i{
     margin-right: 5px;
@@ -614,8 +607,8 @@ footer .container .footer-box .middle-footer .quick-links ul li a i{
     margin-right: 5px;
 }
 footer .container .footer-box .content{
-
-    width: calc( (100% - 50px) / 4);
+    width: 100%;
+    /* width: calc( (100% - 40px) / 4); */
 }
 footer .container .footer-box .content h3{
     font-size: 18.72px;
@@ -639,3 +632,75 @@ footer .container .footer-box .content ul li a{
     color: #fff;
 }
 /***** End Footer *****/
+
+
+/***** Start Media Query *****/
+@media screen and (min-width: 640px){}
+@media screen and (min-width: 768px){
+    .chefs-page .container .chefs-image .items{
+        width: calc((100% - 60px) / 2);
+    }
+    .gallery-page .container .gallery-box{
+        columns: 2;
+    }
+    .contact-page .container .contact-mealify-info .item{
+        width: calc((100% - 30px) / 2);
+    }
+    footer .container .footer-box .about{
+        width: calc( (100% - 40px) / 2);
+        order: 1;
+    }
+    footer .container .footer-box .middle-footer{
+        width: 100%;
+        order: 3;
+    }
+    footer .container .footer-box .content{
+        width: calc( (100% - 40px) / 2);
+        order: 2;
+    }
+}
+@media screen and (min-width: 1024px){
+    .navbar .container .nav-content .nav-link ul{
+        display: flex;
+    }
+    .home-page .container .home-content{
+        flex-direction: row;
+    }
+    .home-page .container .home-content .home-info{
+        text-align: start;
+        width: 45%;
+    }
+    .home-page .container .home-content .home-info .buttons{
+        justify-content: start;
+    }
+    .home-page .container .home-content .home-image{
+        width: 40%;
+    }
+    .chefs-page .container .chefs-image .items{
+        width: calc((100% - 60px) / 3);
+    }
+    .gallery-page .container .gallery-box{
+        columns: 3;
+    }
+    .contact-page .container .contact-mealify-info .item{
+        width: calc((100% - 30px) / 2);
+    }
+    .contact-page .container .contact-form .row .form-input{
+        width: calc((100% - 20px) /2);
+    }
+    footer .container .footer-box .about{
+        width: calc( (100% - 40px) / 4);
+        order: 1;
+    }
+    footer .container .footer-box .middle-footer{
+       width: calc( (100% - 40px) / 2);
+        order: 2;
+    }
+    footer .container .footer-box .content{
+        width: calc( (100% - 40px) / 4);
+        order: 3;
+    }
+}
+@media screen and (min-width: 1280px){}
+@media screen and (min-width: 1536px){}
+/***** End Media Query *****/
